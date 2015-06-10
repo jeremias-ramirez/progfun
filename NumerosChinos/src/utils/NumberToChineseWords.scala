@@ -13,7 +13,7 @@ def format(unit: Int): String =
   def formatString(numeros: List[Char]): String=
   {
     if(numeros.isEmpty) ""
-    else digits.get(numeros.head.toInt-48)+exponent.get((math.pow(10, numeros.size-1)).toInt).toString()+formatString(numeros.tail)
+    else digits((numeros.head.toInt-48))+exponent(math.pow(10, numeros.size-1).toInt)+formatString(numeros.tail)
   }
   
   def getExponent(num:Int):Int = {if(num==0)1 else 10^num }
